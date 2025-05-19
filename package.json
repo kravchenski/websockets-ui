@@ -2,20 +2,34 @@
     "name": "ws_task",
     "version": "1.0.0",
     "description": "Template for the WebSocket remote control task",
-    "main": "index.js",
-    "type": "module",
+    "main": "index.ts",
     "scripts": {
-        "start": "node ./index.js",
-        "start:dev": "nodemon ./index.js",
+        "start:dev": "nodemon ./index.ts",
+        "start": "webpack && node dist/bundle.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Andrei Auchynnikau",
     "keywords": [],
     "license": "ISC",
     "devDependencies": {
-        "nodemon": "^2.0.16"
+        "@types/node": "^22.15.18",
+        "@typescript-eslint/eslint-plugin": "^8.32.1",
+        "@typescript-eslint/parser": "^8.32.1",
+        "eslint": "^9.27.0",
+        "eslint-config-prettier": "^10.1.5",
+        "eslint-plugin-prettier": "^5.4.0",
+        "nodemon": "^2.0.16",
+        "prettier": "^3.5.3",
+        "typescript": "^5.8.3",
+        "webpack": "^5.99.8",
+        "webpack-cli": "^6.0.1"
     },
     "dependencies": {
+        "@types/ws": "^8.18.1",
+        "dotenv": "^16.5.0",
+        "node-polyfill-webpack-plugin": "^4.1.0",
+        "ts-loader": "^9.5.2",
+        "ts-node": "^10.9.2",
         "ws": "^8.8.0"
     }
 }
